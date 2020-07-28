@@ -1,0 +1,32 @@
+/* 共通部分 */
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+//color 
+//$price:#fff;
+//$second:#000;
+//
+a{
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+img{
+  width: 100%;
+  vertical-align: bottom;
+}
+.white{
+  color: #fff;
+}
+.btn:hover{
+  cursor: pointer;
+}
+
+
+$gothic: "Yu Gothic", "游ゴシック", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
