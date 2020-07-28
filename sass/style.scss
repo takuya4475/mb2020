@@ -2,3 +2,68 @@
 @import "header";
 @import "mixin";
 
+body{
+  font-family: "Hiragino Kaku Gothic ProN";
+  width: 100%;
+  height: auto;
+  background-image: url(../img/background.png);
+  background-size: cover;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.header-menu{
+  margin-right: 30.5px;
+  margin-left: 30.5px;
+  text-align: center;
+  font-weight: bold;
+}
+.en{
+  font-size: $fs-l;
+}
+.ja{
+  font-size: $fs-xs;
+}
+.nav-container{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/*----------  mv  --------*/
+.mv{
+  background-image: url(../img/heder.png);
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  &-container{
+    max-width: 920px;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+  }
+  &-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88px;
+  }
+  &-btn{
+    width: 200px;
+    height: 60px;
+    background-color: $primary;
+    color: $white;
+    font-size: $fs-s;
+    position: absolute;
+    bottom: -90px;
+    right: 0px;
+  }
+}
+.ly-padding60{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.ly-flexEnd{
+  align-self: flex-end;
+}
+

@@ -14,6 +14,7 @@ box-sizing: border-box;
 a{
   text-decoration: none;
   display: inline-block;
+  color: inherit;
   width: 100%;
   cursor: pointer;
 }
@@ -27,6 +28,26 @@ img{
 .btn:hover{
   cursor: pointer;
 }
+body{
+  font-size: 16px;
+}
 
+h1, h2, h3, h4, h5, h6{
+  font-family: Futura, sans-serif;
+}
 
-$gothic: "Yu Gothic", "游ゴシック", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+$fs-xl :2.125em;
+$fs-l: 1.375em;
+$fs-m:1em;
+$fs-s:0.875em;
+$fs-xs:0.75em;
+
+.container{
+  max-width: 810px;
+  width: 100%;
+}
+$primary: #C63205;
+$second: #421f15;
+$white: #fff;
+$info: #333333;
+
