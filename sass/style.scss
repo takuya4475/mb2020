@@ -95,3 +95,39 @@ body{
 .ly-flex > p:last-of-type{
   margin-right: 30px;
 }
+
+/*--------------news------------*/
+.news{
+  position: relative;
+  &-ttl{
+    font-size: 43px;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 30px;
+  }
+  &-btn{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 120px;
+    height: 40px;
+    color: $white;
+    background-color: $primary;
+  }
+  &-info{
+    width: 31%;
+    height: 260px;
+    background-color: $white;
+  }
+  &-date{
+    font-size: $fs-xs;
+    padding-top: 14px;
+    color: #666;
+  }
+
+  &-txt{
+    font-weight: 600;
+    color: $info;
+    font-size: 1em;
+  }
+}
