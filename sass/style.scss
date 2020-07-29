@@ -1,6 +1,7 @@
 @import "base";
 @import "header";
 @import "mixin";
+@import "layout";
 
 body{
   font-family: "Hiragino Kaku Gothic ProN";
@@ -59,11 +60,38 @@ body{
     right: 0px;
   }
 }
-.ly-padding60{
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.ly-flexEnd{
-  align-self: flex-end;
-}
 
+/* INTRODUCTION */
+.intro{
+  position: relative;
+  background-color: rgba(255,255,255, .3);
+  &-img::before{
+    content: url(../img/intro.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28.4%;
+    height: auto;
+  }
+  &-ttl{
+    text-align: center;
+    font-size: 2.875em;
+    font-weight: 400;
+    padding-bottom: 15px;
+    color: #301F1B;
+  }
+  &-sbttl{
+    text-align: center;
+    padding-bottom: 30px;
+    color: #301F1B;
+  }
+  &-txt{
+    font-size: $fs-xs;
+    color: $info;
+    margin-left: 30px;
+  }
+}
+//ここは要改善ポイント
+.ly-flex > p:last-of-type{
+  margin-right: 30px;
+}

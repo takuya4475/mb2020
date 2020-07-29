@@ -1,0 +1,34 @@
+.ly-{
+  &wrapper{
+    max-width: 810px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &py60{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &py30{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &flexEnd{
+    align-self: flex-end;
+  }
+  &my60{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  &my30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &flex{
+    display: flex;
+  }
+  &between{
+    justify-content: space-between;
+  }
+
+}
