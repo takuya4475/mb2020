@@ -17,6 +17,11 @@ a{
   color: inherit;
   width: 100%;
   cursor: pointer;
+  transition: .3s;
+  &:hover{
+    opacity: .8;
+    transition: .3s;
+  }
 }
 img{
   width: 100%;
@@ -27,6 +32,8 @@ img{
 }
 .btn:hover{
   cursor: pointer;
+  transition: .3s;
+  opacity: .8;
 }
 body{
   font-family: "Hiragino Kaku Gothic ProN" sans-serif;
@@ -35,6 +42,7 @@ body{
 
 h1, h2, h3, h4, h5, h6{
   font-family: Futura, sans-serif;
+  font-weight: 300;
 }
 
 $fs-xl :2.125em;
@@ -51,8 +59,3 @@ $primary: #C63205;
 $second: #421f15;
 $white: #fff;
 $info: #333333;
-
-.btn:hover{
-  transition: .3s;
-  opacity: .8;
-}
