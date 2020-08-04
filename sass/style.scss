@@ -47,8 +47,7 @@ body{
     margin-top: 88px;
   }
   &-btn{
-    width: 200px;
-    height: 60px;
+    padding: 23px 30px;
     background-color: $primary;
     color: $white;
     font-size: $fs-s;
@@ -106,8 +105,7 @@ body{
     position: absolute;
     top: 10px;
     right: 0;
-    width: 120px;
-    height: 40px;
+    padding: 12px;
     color: $white;
     background-color: $primary;
   }
@@ -156,13 +154,12 @@ body{
     right: 0;
     bottom: 30px;
     background-color: $primary;
-    width: 115px;
-    height: 36px;
+    padding: 11px 16px;
     color: $white;
   }
 }
 
-.comments{
+.comment{
   &-ttl{
     font-size: 2.69em;
     text-align: center;
@@ -171,4 +168,35 @@ body{
     font-size: 1.5em;
     text-align: center;
   }
-}
+  &-bgimg{
+    background-image: url(../img/comments.png);
+    position: relative;
+  }
+  &-container{
+    color: $white;
+    width: 420px;
+    padding-top: 44px;
+    padding-bottom: 42px;
+    padding-left: 30px;
+  }
+  &-person{
+    font-size: 1.25em;
+    padding-bottom: 15px;
+    span{
+      font-size: 1.625em;
+    }
+  }
+  &-txt{
+    font-size: $fs-s;
+    font-weight: 300;
+    line-height: 1.57;
+  }
+  &-btn{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: $primary;
+    padding: 10px 20px;
+    color: $white;
+  }
+} 
