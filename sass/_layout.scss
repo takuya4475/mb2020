@@ -43,5 +43,11 @@
     height: auto;
     background-repeat: no-repeat;
   }
-
+  &column{
+    display: flex;
+    justify-content: center;
+    &:nth-last-child(){
+      margin-right: 0;
+    }
+  }
 }
