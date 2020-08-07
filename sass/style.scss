@@ -237,13 +237,16 @@ body{
   }
   &-bgimg{
     background-image: url(../img/comments.png);
+    background-position: center;
     position: relative;
+    padding-bottom: 30px;
   }
   &-container{
     color: $white;
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
     padding-top: 44px;
-    padding-bottom: 42px;
+    padding-bottom: 44px;
     padding-left: 30px;
   }
   &-person{
@@ -265,6 +268,13 @@ body{
     background-color: $primary;
     padding: 10px 20px;
     color: $white;
+    @include mq('sp'){
+      display: block;
+      width: 90%;
+      position:static;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 } 
 
