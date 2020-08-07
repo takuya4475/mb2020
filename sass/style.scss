@@ -3,8 +3,12 @@
 @import "mixin";
 @import "layout";
 
+html{
+  font-size: 62.4%;
+}
 body{
   font-family: "Hiragino Kaku Gothic ProN";
+  font-size: 1.6rem;
   width: 100%;
   height: auto;
   background-image: url(../img/background.png);
@@ -30,6 +34,13 @@ body{
 .nav-container{
   margin-top: 25px;
   margin-bottom: 25px;
+  @include mq('tab'){
+    transform: scale(.9);
+  }
+  @include mq('sp'){
+    transform: scale(.8);
+    width: 100%;
+  }
 }
 
 /*----------  mv  --------*/
@@ -37,6 +48,7 @@ body{
   background-image: url(../img/heder.png);
   &-container{
     max-width: 920px;
+    width: 90%;
     margin: 0 auto;
     height: auto;
     position: relative;
@@ -45,6 +57,43 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 88px;
+    @include mq('sp'){
+      flex-direction: column;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &-txt_date{
+    color: $white;
+    font-size: $fs-xl;
+    width: 50%;
+    max-width: 350px;
+    margin-top: auto;
+    font-weight: bold;
+    @include mq('sp'){
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  &-txt_desc{
+    color: $white;
+    font-size: $fs-s;
+    width: 45%;
+    @include mq('sp'){
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  &-flexEnd{
+    align-self: flex-end;
+    @include mq('sp'){
+      align-self: center; 
+      padding-bottom: 30px;
+    }
   }
   &-btn{
     padding: 23px 30px;
@@ -66,12 +115,12 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 28.4%;
-    height: auto;
+    transform: translate(-10%, -10%) scale(0.8);
+
   }
   &-ttl{
     text-align: center;
-    font-size: 2.875em;
+    font-size: 2.875rem;
     padding-bottom: 15px;
     color: #301F1B;
   }
@@ -91,7 +140,6 @@ body{
 .ly-flex > p:last-of-type{
   margin-right: 30px;
 }
-
 /*--------------news------------*/
 .news{
   position: relative;
@@ -111,8 +159,12 @@ body{
   }
   &-info{
     width: 31%;
-    height: 260px;
+    // height: 260px;
     background-color: $white;
+    @include mq('sp'){
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
   &-date{
     font-size: $fs-xs;
@@ -124,6 +176,12 @@ body{
     font-weight: 600;
     color: $info;
     font-size: 1em;
+    @include mq('sp'){
+      text-align: center;
+      br{
+        display: none;
+      }
+    }
   }
 }
 
@@ -134,7 +192,7 @@ body{
     text-align: center;
     padding-top: 30px;
     color: $white;
-    font-size: 43px;
+    font-size: 4.3rem;
   }
   &-container{
     position: relative;
@@ -143,11 +201,17 @@ body{
     margin-right: 0;
     margin-left: auto;
     padding-bottom: 75px;
+    @include mq('sp'){
+      position: relative;
+      margin: 30px auto;
+      width: 100%;
+    }
   }
   &-txt{
     color: $white;
     font-size: $fs-xs;
     line-height: 1.75;
+    padding-bottom: 30px;
   }
   &-btn{
     position: absolute;

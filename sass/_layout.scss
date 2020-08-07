@@ -1,7 +1,7 @@
 .ly-{
   &wrapper{
     max-width: 810px;
-    width: 100%;
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -20,9 +20,6 @@
   &pa15{
     padding: 15px;
   }
-  &flexEnd{
-    align-self: flex-end;
-  }
   &my60{
     margin-top: 60px;
     margin-bottom: 60px;
@@ -36,6 +33,9 @@
   }
   &between{
     justify-content: space-between;
+    @include mq('sp'){
+      flex-direction: column;
+    }
   }
   &bigbg{
     background-size: cover;
