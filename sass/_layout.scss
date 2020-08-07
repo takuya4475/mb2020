@@ -45,9 +45,15 @@
   }
   &column{
     display: flex;
-    justify-content: center;
     &:nth-last-child(){
       margin-right: 0;
+    }
+    @include mq('sp'){
+      flex-direction: column;
+    }
+    &_sp{
+      display: flex;
+      justify-content: center;
     }
   }
 }
