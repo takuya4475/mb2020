@@ -19,12 +19,23 @@ body{
   display: flex;
   justify-content: center;
   list-style: none;
+  @include mq('sp'){
+    color: $white;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+  }
 }
 .header-menu{
   margin-right: 30.5px;
   margin-left: 30.5px;
   text-align: center;
   font-weight: bold;
+  @include mq('sp'){
+    margin-top: 3vh;
+  }
 }
 .en{
   font-size: $fs-l;
@@ -35,12 +46,93 @@ body{
 .nav-container{
   margin-top: 25px;
   margin-bottom: 25px;
-  @include mq('tab'){
-    transform: scale(.9);
-  }
   @include mq('sp'){
-    transform: scale(.8);
-    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/*----------  spのヘッダー部分 --------*/
+.sp-nav-btn{
+  &-backColor,&-frontColor1,&-frontColor2,&-frontColor3{
+    display: none;
+  }
+}
+.sp-nav{
+  @include mq('sp'){  
+    display: block; 
+    position: fixed;
+    background-color: #222;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 50vw;
+    text-align: center;
+    z-index: 1;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s,opacity .3s;
+    &-btn-backColor{
+      display: block; 
+      position: fixed;
+      right: 5%;
+      margin-top: 3%;
+      z-index: 3;
+      width: 50px;
+      height: 30px;    
+      background-color: rgba(255,255,255, .1);
+      cursor: pointer;
+    }
+    &-btn-frontColor1{
+      display: block; 
+      position: fixed;
+      right: 5%;
+      margin-top: 3%;
+      z-index: 2;
+      width: 50px;
+      height: 5px;
+      background-color: #000;
+    }
+    &-btn-frontColor2{
+      display: block; 
+      position: fixed;
+      right: 5%;
+      margin-top: 5%;
+      z-index: 2;
+      width: 50px;
+      height: 5px;
+      background-color: #000;
+    }
+    &-btn-frontColor3{
+      display: block; 
+      position: fixed;
+      right: 5%;
+      margin-top: 7%;
+      z-index: 2;
+      width: 50px;
+      height: 5px;
+      background-color: #000;
+    }
+  }
+}
+
+/*---------- jQuery制御  --------*/
+@include mq('sp'){
+  .sp-nav.open{
+    opacity: 1;
+    transform: translateX(0);   
+  }
+  .no_scroll{
+    overflow: hidden;
+  }
+  .sp-nav-btn-frontColor1.open{
+    background-color: $white;
+  }
+  .sp-nav-btn-frontColor2.open{
+    background-color: $white;
+  }
+  .sp-nav-btn-frontColor3.open{
+    background-color: $white;
   }
 }
 

@@ -9,7 +9,11 @@
 </head>
 <body>
   <header>
-    <nav class="nav-container">
+    <span class="sp-nav-btn-backColor"></span>
+    <span class="sp-nav-btn-frontColor1"></span>
+    <span class="sp-nav-btn-frontColor2"></span>
+    <span class="sp-nav-btn-frontColor3"></span>
+    <nav class="nav-container sp-nav">
       <ul class="flex-center">
         <li class="header-menu"><a href="#"><span class="ja">トップ</span><br><span class="en">TOP</span></a></li>
         <li class="header-menu"><a href="#"><span class="ja">ニュース</span><br><span class="en">NEWS</span></a></li>
@@ -38,8 +42,8 @@
   </div><!-- /.mv -->
 
   <!-- INTRODUCTION -->
-  <section class="ly-my60 intro ly-wrapper js-fadein">
-    <div class="ly-py30 intro-img">
+  <section class="ly-my60 intro ly-wrapper">
+    <div class="ly-py30 intro-img js-fadein">
       <h2 class="intro-ttl">INTRODUCTION</h2>
       <h3 class="intro-sbttl">なぜ今「マハーバーラタ」なのか？</h3>
       <div class="ly-flex ly-between">
@@ -89,9 +93,9 @@
 
   <!-- ---------STORY----------- -->
 <section class="story ly-bigbg">
-  <h2 class="story-ttl">STORY</h2>
+  <h2 class="story-ttl js-fadein">STORY</h2>
   <div class="ly-wrapper">
-    <div class="story-container">
+    <div class="story-container js-fadein">
       <p class="story-txt">マハー（偉大な）、バーラタ（バラタ族）、つまり「偉大なバラタ族」の物語。神々が人間界を作り出すところから始まり、バラタ族の中のクル家とパーンドゥ家という二つの部族間の対立を巡るストーリー。神の血を引く個性豊かな登場人物たちによる差別、対立、欲望、嫉妬など、生の苦しみが描かれ、最終的には一族が破滅していく。<br>
         <br>
       世界的な文学作品古代ギリシャの「イーリアス」「オデュッセイア」と並ぶ世界三大叙事詩の一つに数えられており、「ラーマーヤナ」と双璧を成すインド二大叙事詩の一つ。原語はサンスクリット語であるが、全18巻、10万詩節を超えるその長さは聖書の約4倍と言われ、原典の日本語訳はいまだ完結していない。<br>
@@ -103,7 +107,7 @@
 </section><!-- /.story -->
 
 <!-- ----------COMMENT----------- -->
-<section class="comment ly-wrapper ly-py60">
+<section class="comment ly-wrapper ly-py60 js-fadein">
   <h2 class="comment-ttl">COMMENTS</h2>
   <h3 class="comment-sbttl">舞台関係者のみならず各界著名人からコメントが届いています！</h3>
   <div class="comment-bgimg ly-bigbg">
@@ -120,8 +124,8 @@
 <!-- ----------CAST----------- -->
 <section class="cast">
   <div class="cast-bgColor">
-    <h2 class="cast-ttl">CAST</h2>
-    <div class="ly-column ly-wrapper">
+    <h2 class="cast-ttl js-fadein">CAST</h2>
+    <div class="ly-column ly-wrapper js-fadein">
       <div class="cast-person">
         <figure class="cast-img"><img src="img/cast1.png"></figure>
         <dl>
@@ -176,8 +180,8 @@
 <!-- ----------SCHEDULE----------- -->
 <section class="schedule ly-py60 ly-my30">
   <div class="schedule-erea ly-wrapper">
-    <h2 class="schedule-ttl ly-py30">SCHEDULE</h2>
-    <ul class="schedule-items">
+    <h2 class="schedule-ttl ly-py30 js-fadein">SCHEDULE</h2>
+    <ul class="schedule-items js-fadein">
       <li class="schedule-item">2020.07.04 17:00開演 中野ZERO大ホール<a href="#">チケット予約受付中</a></li>
       <li class="schedule-item">2020.07.04 17:00開演 中野ZERO大ホール <a href="#">チケット予約受付中</a></li>
       <li class="schedule-item">2020.07.04 17:00開演 中野ZERO大ホール <a href="#">チケット予約受付中</a></li>
@@ -197,5 +201,14 @@
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
   <script src="main.js"></script>
+  <noscript>
+    <style>
+      .js-fadein {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+      }
+    </style>
+  </noscript>
 </body>
 </html>
