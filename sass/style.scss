@@ -1,3 +1,9 @@
+/*
+Theme Name: portfolio2020
+Author: Yoshi
+Description:Yoshiのポートフォリオ制作物
+Version: 1.0
+*/
 @import "base";
 @import "header";
 @import "mixin";
@@ -12,7 +18,7 @@ body{
   font-size: 1.6rem;
   width: 100%;
   height: auto;
-  background-image: url(../img/background.png);
+  background-image: url(img/background.png);
   background-size: cover;
 }
 .flex-center{
@@ -138,7 +144,7 @@ body{
 
 /*----------  mv  --------*/
 .mv{
-  background-image: url(../img/heder.png);
+  background-image: url(img/heder.png);
   &-container{
     max-width: 920px;
     width: 90%;
@@ -204,7 +210,7 @@ body{
   position: relative;
   background-color: rgba(255,255,255, .3);
   &-img::before{
-    content: url(../img/intro.png);
+    content: url(img/intro.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -280,7 +286,7 @@ body{
 
 /*-------------- story ------------*/
 .story{
-  background-image: url(../img/story.png);
+  background-image: url(img/story.png);
   &-ttl{
     text-align: center;
     padding-top: 30px;
@@ -332,7 +338,7 @@ body{
     padding: 33px;
   }
   &-bgimg{
-    background-image: url(../img/comments.png);
+    background-image: url(img/comments.png);
     background-position: center;
     position: relative;
     padding-bottom: 30px;
@@ -444,7 +450,7 @@ body{
 
 /*  ----------SCHEDULE-----------  */
 .schedule{
-  background-image: url(../img/background.png);
+  background-image: url(img/background.png);
   background-size: cover;
   width: 100%;
   &-erea{

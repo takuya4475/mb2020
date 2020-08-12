@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mb2020</title>
-  <link rel="stylesheet" href="https://fonts.adobe.com/fonts/futura-pt#fonts-section">
-  <link rel="stylesheet" href="sass/style.css">
-</head>
-<body>
-  <header>
-    <span class="sp-nav-btn-backColor"></span>
-    <span class="sp-nav-btn-frontColor1"></span>
-    <span class="sp-nav-btn-frontColor2"></span>
-    <span class="sp-nav-btn-frontColor3"></span>
-    <nav class="nav-container sp-nav">
-      <ul class="flex-center">
-        <li class="header-menu"><a href="#"><span class="ja">トップ</span><br><span class="en">TOP</span></a></li>
-        <li class="header-menu"><a href="#"><span class="ja">ニュース</span><br><span class="en">NEWS</span></a></li>
-        <li class="header-menu"><a href="#"><span class="ja">ストーリー</span><br><span class="en">STORY</span></a></li>
-        <li class="header-menu"><a href="#"><span class="ja">著名人コメント</span></span><br><span class="en">COMMENTS</span></a></li>
-        <li class="header-menu"><a href="#"><span class="ja">キャスト</span><br><span class="en">CAST</span></a></li>
-        <li class="header-menu"><a href="#"><span class="ja">問い合わせ</span><br><span class="en">INQUIRY</span></a></li>
-      </ul>  <!-- flex-center -->
-    </nav>
-  </header>
+<?php get_header(); ?>
   <div class="mv ly-bigbg">
     <div class="ly-py60">
       <div class="mv-container">
-        <h2><img src="img/ttl-text.png" alt="世界最長の叙情詩をピーター・ブルック以来の全編舞台化"></h2>
-        <h1><img src="img/mv-title.png" alt="完全版マハーバーラタ"></h1>
+        <h2><img src="<?php echo get_template_directory_uri(); ?>/img/ttl-text.png" alt="世界最長の叙情詩をピーター・ブルック以来の全編舞台化"></h2>
+        <h1><img src="<?php echo get_template_directory_uri(); ?>/img/mv-title.png" alt="完全版マハーバーラタ"></h1>
         <div class="mv-flex">
           <p class="mv-txt_date">2020年7月4日〜7日なかのZERO大ホール</p>
           <p class="mv-txt_desc">
@@ -65,7 +40,7 @@
     <button class="btn news-btn"><a href="#">ニュース一覧へ</a></button>
     <div class="ly-flex ly-between">
       <div class="news-info">
-        <img src="img/news-img.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/news-img.png" alt="">
         <div class="ly-pa15">
           <time class="news-date">2019.9.30</time><!-- /.date -->
           <h2 class="news-txt">「完全版マハーバーラタ」<br>
@@ -73,7 +48,7 @@
         </div><!-- /.ly-pa15 -->
       </div><!-- /.news-info -->
       <div class="news-info">
-        <img src="img/news2.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/news2.png" alt="">
         <div class="ly-pa15">
           <time class="news-date">2019.9.30</time><!-- /.date -->
           <h2 class="news-txt">「完全版マハーバーラタ」<br>
@@ -81,7 +56,7 @@
         </div><!-- /.ly-pa15 -->
       </div><!-- /.news-info -->
       <div class="news-info">
-        <img src="img/news-img.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/news-img.png" alt="">
         <div class="ly-pa15">
           <time class="news-date">2019.9.30</time><!-- /.date -->
           <h2 class="news-txt">「完全版マハーバーラタ」<br>
@@ -127,7 +102,7 @@
     <h2 class="cast-ttl js-fadein">CAST</h2>
     <div class="ly-column ly-wrapper js-fadein">
       <div class="cast-person">
-        <figure class="cast-img"><img src="img/cast1.png"></figure>
+        <figure class="cast-img"><img src="<?php echo get_template_directory_uri(); ?>/img/cast1.png"></figure>
         <dl>
           <dt class="cast-position">作・演出・振付・構成</dt>
           <dd class="cast-name">小池博史</dd>
@@ -141,7 +116,7 @@
           著書に「ロンググッドバイ～パパ・タラフマラとその時代」（青幻舎刊）、「からだのこえをきく」（新潮社刊）等。</p>
       </div><!-- /.cast-person -->
       <div class="cast-person">
-      <figure class="cast-img"><img src="img/cast2.png"></figure>
+      <figure class="cast-img"><img src="<?php echo get_template_directory_uri(); ?>/img/cast2.png"></figure>
       <dl>
         <dt class="cast-position">出演</dt>
         <dd class="cast-name">白井さち子</dd>
@@ -160,7 +135,7 @@
         </p>
       </div><!-- /.cast-person -->
     <div class="cast-person">
-      <figure class="cast-img"><img src="img/cast3.png"></figure>
+      <figure class="cast-img"><img src="<?php echo get_template_directory_uri(); ?>/img/cast3.png"></figure>
       <dl>
         <dt class="cast-position">出演</dt>
         <dd class="cast-name">小谷野哲郎</dd>
@@ -177,38 +152,4 @@
 </div><!-- /.cast-bgColor -->
 </section><!-- /.cast -->
 
-<!-- ----------SCHEDULE----------- -->
-<section class="schedule ly-py60 ly-my30">
-  <div class="schedule-erea ly-wrapper">
-    <h2 class="schedule-ttl ly-py30 js-fadein">SCHEDULE</h2>
-    <ul class="schedule-items js-fadein">
-      <li class="schedule-item">2020.07.04 17:00開演 中野ZERO大ホール<a href="#">チケット予約受付中</a></li>
-      <li class="schedule-item">2020.07.04 17:00開演 中野ZERO大ホール <a href="#">チケット予約受付中</a></li>
-      <li class="schedule-item">2020.07.04 17:00開演 中野ZERO大ホール <a href="#">チケット予約受付中</a></li>
-      <li class="schedule-item">2020.07.04 17:00開演 中野ZERO大ホール <a href="#">チケット予約受付中</a></li>
-    </ul>
-  </div><!-- /.schedule-erea -->
-  <div class=" ly-wrapper ly-column_sp ly-my30">
-    <button class="schedule-btn btn"><a href="#">お問い合わせはこちら</a></button>
-    <button class="schedule-btn2 btn"><a href="#">チケット予約サイトへ</a></button>
-  </div><!-- /.ly-wrapper .ly-column ly-my30 -->
-</section><!-- /.schedule -->
-<footer class="footer">
-  <small>Copyright &copy 2019 完全版マハーバーラタ All Rights Reserved.</small>
-</footer><!-- /.footer -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-  crossorigin="anonymous"></script>
-  <script src="main.js"></script>
-  <noscript>
-    <style>
-      .js-fadein {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0px);
-      }
-    </style>
-  </noscript>
-</body>
-</html>
+<?php get_footer(); ?>
