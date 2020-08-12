@@ -1,4 +1,4 @@
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 	$(window).scroll(function (){
 		$('.js-fadein').each(function(){
 			var elemPos = $(this).offset().top;

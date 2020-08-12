@@ -7,13 +7,22 @@
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
   <header>
     <span class="sp-nav-btn-backColor"></span>
     <span class="sp-nav-btn-frontColor1"></span>
     <span class="sp-nav-btn-frontColor2"></span>
     <span class="sp-nav-btn-frontColor3"></span>
     <nav class="nav-container sp-nav">
+<?php
+  wp_nav_menu(
+    array(
+      'theme_location' => 'place_global',
+      'menu_class'=> 'flex-center',
+      'container' => false,
+    )
+  );
+?>
       <ul class="flex-center">
         <li class="header-menu"><a href="#"><span class="ja">トップ</span><br><span class="en">TOP</span></a></li>
         <li class="header-menu"><a href="#"><span class="ja">ニュース</span><br><span class="en">NEWS</span></a></li>
