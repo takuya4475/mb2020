@@ -11,10 +11,19 @@ function my_enqueue_scripts(){
 }
 add_action('wp_enqueue_scripts','my_enqueue_scripts');
 
+//wp_nav_menuにある子要素liのクラス名を追加する
+function add_additional_class_on_li($classes, $item, $args) {
+  if(isset($args->add_li_class)) {
+      $classes[] = $args->add_li_class;
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
 //ヘッダー、フッターのカスタムメニュー化
 register_nav_menus(
   array(
     'place_global'=> 'グローバル',
-    'place_footer'=>'フッターナビ'
+    'place_footer'=>'フッターナビ' //現在は使っていない。
   )
 );
