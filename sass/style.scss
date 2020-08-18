@@ -205,6 +205,8 @@ body{
   }
 }
 
+
+
 /* INTRODUCTION */
 .intro{
   position: relative;
@@ -500,5 +502,35 @@ body{
   small{
     color: $white;
     line-height: 5;
+  }
+}
+
+/*  ------- 下層ページヘッダー---------*/
+
+//news-archiveの<body>に付いているクラス
+.category{
+  .mv-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    @include mq('sp'){
+      flex-direction: column;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .mv-ttl-container{
+    width: 50%;
+    @include mq('sp'){
+      width: 100%;
+      margin-bottom: 80px;
+    }
+    }
+  .mv-txt_date{
+    width: auto;
+    font-size: $fs-l;
+    @include mq('sp'){
+      font-size: 3.3rem;
+    }
   }
 }

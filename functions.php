@@ -5,7 +5,9 @@ function my_enqueue_scripts(){
   //jsを読み込むテンプレート
   wp_enqueue_script('main_js',get_template_directory_uri().'/main.js',array() );
   //cssをmy_styleにして、読み込むテンプレート
-  wp_enqueue_style('my_styles', get_template_directory_uri().'/style.css',array() );
+  wp_enqueue_style('my_styles', get_stylesheet_uri(),array(),
+  filemtime(get_theme_file_path('style.css')) //キャッシュを削除する。
+  );
   // fontをmy_fontにして、読み込むテンプレート
   wp_enqueue_style('my_font', 'https://fonts.adobe.com/fonts/futura-pt#fonts-section',array() );
 }
