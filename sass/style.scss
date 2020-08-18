@@ -540,3 +540,32 @@ body{
     text-align: center;
   } 
 }
+
+/*---------pagenaviのcss-----------*/
+
+.wp-pagenavi {
+  text-align: center;
+  margin-top: 3.6rem;
+  .pages{
+    display: none;
+  }
+  a, span {
+    display: inline;
+    background-color: #F4D102;
+    color: #1A1A1A;
+    text-decoration: none;
+    // border: 2px solid #F4D102;
+    padding: 1rem 1rem;
+    margin: 1rem;
+  }
+}
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+  background-color: #1A1A1A;
+    color: #F4D102;
+}
+
+.wp-pagenavi span.current {
+  font-weight: bold;
+}
+
+

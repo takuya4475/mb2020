@@ -42,6 +42,13 @@
       flex-direction: column;
     }
   }
+  &flex-start{
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include mq('sp'){
+      flex-direction: column;
+    }
+  }
   &bigbg{
     background-size: cover;
     width: 100%;
