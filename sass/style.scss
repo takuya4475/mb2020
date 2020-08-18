@@ -245,7 +245,7 @@ body{
 .news{
   position: relative;
   &-ttl{
-    font-size: 43px;
+    font-size: 4.3rem;
     text-align: center;
     font-weight: 300;
     padding-bottom: 30px;
@@ -264,6 +264,7 @@ body{
     background-color: $white;
     @include mq('sp'){
       width: 100%;
+      height: auto;
       margin-bottom: 30px;
     }
   }
@@ -533,4 +534,9 @@ body{
       font-size: 3.3rem;
     }
   }
+  
+  /*---------- article-news---------------*/
+  .article-news>h2{
+    text-align: center;
+  } 
 }

@@ -29,3 +29,8 @@ register_nav_menus(
     'place_footer'=>'フッターナビ' //現在は使っていない。
   )
 );
+//アイキャッチ画像を表示出来るようにする
+add_theme_support('post-thumbnails');
+
+//カテゴリー用サイズ設定
+add_image_size('archive', 500, 330, true);
