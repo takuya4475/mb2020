@@ -267,7 +267,15 @@ body{
       height: auto;
       margin-bottom: 30px;
     }
+    img{
+      height: 140px;
+      object-fit: cover;
+      @include mq('sp'){
+        height: auto;
+      }
+    }
   }
+  
   &-date{
     font-size: $fs-xs;
     padding-top: 14px;
@@ -526,7 +534,7 @@ body{
       width: 100%;
       margin-bottom: 80px;
     }
-    }
+  }
   .mv-txt_date{
     width: auto;
     font-size: $fs-l;
@@ -534,11 +542,6 @@ body{
       font-size: 3.3rem;
     }
   }
-  
-  /*---------- article-news---------------*/
-  .article-news>h2{
-    text-align: center;
-  } 
 }
 // singleの装飾
 .single{

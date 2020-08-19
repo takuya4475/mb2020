@@ -35,36 +35,7 @@
   </section><!-- /.intro .ly-my60 ly-wrapper -->
 
 <!-- ---------news-------- -->
-  <section class="news ly-my60 ly-wrapper js-fadein">
-    <h2 class="news-ttl">NEWS</h2>
-    <button class="btn news-btn"><a href="#">ニュース一覧へ</a></button>
-    <div class="ly-flex ly-between">
-      <div class="news-info">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/news-img.png" alt="">
-        <div class="ly-pa15">
-          <time class="news-date">2019.9.30</time><!-- /.date -->
-          <h2 class="news-txt">「完全版マハーバーラタ」<br>
-            2020年7月・東京公開</h2>
-        </div><!-- /.ly-pa15 -->
-      </div><!-- /.news-info -->
-      <div class="news-info">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/news2.png" alt="">
-        <div class="ly-pa15">
-          <time class="news-date">2019.9.30</time><!-- /.date -->
-          <h2 class="news-txt">「完全版マハーバーラタ」<br>
-            2020年7月・東京公開</h2>
-        </div><!-- /.ly-pa15 -->
-      </div><!-- /.news-info -->
-      <div class="news-info">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/news-img.png" alt="">
-        <div class="ly-pa15">
-          <time class="news-date">2019.9.30</time><!-- /.date -->
-          <h2 class="news-txt">「完全版マハーバーラタ」<br>
-            2020年7月・東京公開</h2>
-        </div><!-- /.ly-pa15 -->
-      </div><!-- /.news-info -->
-    </div><!-- /.ly-flex -->
-  </section><!-- /.news -->
+  <?php get_template_part('front-content')?>
 
   <!-- ---------STORY----------- -->
 <section class="story ly-bigbg">
