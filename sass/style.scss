@@ -508,8 +508,8 @@ body{
 
 /*  ------- 下層ページヘッダー---------*/
 
-//news-archiveの<body>に付いているクラス
-.category{
+//news-archiveと投稿ページの<body>に付いているクラス
+.category,{
   .mv-flex{
     display: flex;
     justify-content: space-between;
@@ -540,15 +540,95 @@ body{
     text-align: center;
   } 
 }
+// singleの装飾
+.single{
+  &-contaner{
+    background-color: #1A1A1A;
+    padding: 1.4rem 3rem;
+  }
+  &-date{
+    font-size: 1.2rem;
+    color: $white;
+  }
+  &-ttl{
+    color: $white;
+    font-size: 2.6rem;
+  }
+  &-txt{
+    background-color: #FDFAE6;
+    padding: 3rem;
+    h2{
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    h3{
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }  
+  }
+}
+.more-news{
+  position: relative;
+}
+.next-post{
+  display: flex;
+  width: 47%;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  text-align: left;
+  color: $info;
+  &::before{
+    content: "\f341";
+    font-family: "dashicons";
+    font-size: 3rem;
+    margin-right: 2rem;
+  }
+  div{
+    font-size: 1.4rem;
+    font-weight: bold;
+
+  }
+  time{
+    font-size: 1.2rem;
+  }
+}
+.prev-post{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+  color: $info;
+  &::after{
+    content: "\f345";
+    font-family: "dashicons";
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+  div{
+    font-size: 1.4rem;
+    font-weight: bold;
+ }
+  time{
+    font-size: 1.2rem;
+  }
+}
+
+
 
 /*---------pagenaviのcss-----------*/
 
 .wp-pagenavi {
   text-align: center;
   margin-top: 3.6rem;
-  .pages{
-    display: none;
-  }
   a, span {
     display: inline;
     background-color: #F4D102;
@@ -569,3 +649,10 @@ body{
 }
 
 
+/* breadcrumbsパンくずリスト */
+.breadcrumbs{
+  a,span{
+    font-size: 1.4rem;
+    display: inline;
+  }
+}

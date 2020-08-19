@@ -34,3 +34,7 @@ add_theme_support('post-thumbnails');
 
 //カテゴリー用サイズ設定
 add_image_size('archive', 500, 330, true);
+//記事用のサイズ設定
+add_image_size('single', 1620, 1156, true);
+//サムネイルのサイズ設定
+add_image_size('thumbnail', 100, 100, true);

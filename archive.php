@@ -12,7 +12,7 @@
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('archive'); ?>
           <div class="ly-pa15">
-            <time class="news-date"><?php the_time('Y.m.d'); ?></time><!-- /.date -->
+            <time class="news-date"><?php the_time('Y.m.d'); ?></time><!-- /.news-date -->
             <h2 class="news-txt"><?php the_title();?></h2>
           </div><!-- /.ly-pa15 -->
         </a>

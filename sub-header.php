@@ -12,3 +12,11 @@
       </div><!-- /.mv-container -->
     </div><!-- /.ly-py-60 -->
   </div><!-- /.mv -->
+
+  <!-- パンクズリスト -->
+  <div class="breadcrumbs ly-wrapper ly-my30" typeof="BreadcrumbList" vocab="http://schema.org/">
+  <?php if(function_exists('bcn_display'))
+  {
+   bcn_display();
+  }?>
+</div>
