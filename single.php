@@ -4,7 +4,7 @@
  <!-- article news -->
  <article class="article-news ly-my60
  ly-wrapper js-fadein">
-    <h2>NEWS</h2>
+    <h2 class="news-ttl">NEWS</h2>
 <?php if(have_posts() ): while(have_posts() ): the_post();?>
     <figure><?php the_post_thumbnail('single'); ?></figure>
     <div class="single-contaner">

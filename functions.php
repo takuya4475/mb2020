@@ -10,6 +10,7 @@ function my_enqueue_scripts(){
   );
   // fontをmy_fontにして、読み込むテンプレート
   wp_enqueue_style('my_font', 'https://fonts.adobe.com/fonts/futura-pt#fonts-section',array() );
+  wp_enqueue_style('dashicons');
 }
 add_action('wp_enqueue_scripts','my_enqueue_scripts');
 
@@ -51,4 +52,13 @@ function get_child_pages($number = -1, $specified_id = null){
   );
   $child_pages = new WP_Query( $args );
   return $child_pages;
+}
+
+//カテゴリーのURLを返す関数
+function get_category_permalink($category_slug = 'news'){
+  // 指定したカテゴリーの ID を取得
+  $category_id = get_cat_ID('news');
+  // このカテゴリーの URL を取得
+  $category_link = get_category_link( $category_id );
+  return $category_link;
 }

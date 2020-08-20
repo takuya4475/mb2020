@@ -11,7 +11,7 @@
             アジア各国のアーティストらが共同で取り組み、発展を遂げる本事業はアジア、そして世界へ向けてビッグウェーブを起こす。タイと日本から世界へと発信する本作。どうぞお見逃しなく！
           </p>
         </div><!-- /.mv-flex -->
-        <button class="mv-btn btn"><a href="#">チケット予約サイトへ</a></button>
+        <button class="mv-btn btn"><a href="＃">チケット予約サイトへ</a></button>
       </div><!-- /.mv-container -->
     </div><!-- /.ly-py-60 -->
   </div><!-- /.mv -->
