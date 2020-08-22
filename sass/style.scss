@@ -145,6 +145,7 @@ body{
 /*----------  mv  --------*/
 .mv{
   background-image: url(img/heder.png);
+  background-position: center;
   &-container{
     max-width: 920px;
     width: 90%;
@@ -155,7 +156,7 @@ body{
   &-flex{
     display: flex;
     justify-content: space-between;
-    margin-top: 88px;
+    // margin-top: 88px;
     @include mq('sp'){
       flex-direction: column;
       margin-right: auto;
@@ -296,8 +297,24 @@ body{
 }
 
 /*-------------- story ------------*/
+.story-bg{
+  background-color: #000;
+}
 .story{
-  background-image: url(img/story.png);
+  background-image: url(img/story1.png);
+  background-position: left;
+  height: auto;
+  position: relative;
+  &::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.3);
+  }
   &-ttl{
     text-align: center;
     padding-top: 30px;
@@ -331,6 +348,10 @@ body{
     padding: 11px 16px;
     color: $white;
   }
+}
+.dis-ab-zIndex{
+  position: relative;
+  z-index: 1;
 }
 
 /*-------------- COMMENT ------------*/
@@ -528,19 +549,19 @@ body{
       margin-left: auto;
     }
   }
-  .mv-ttl-container{
-    width: 50%;
-    @include mq('sp'){
-      width: 100%;
-      margin-bottom: 80px;
+}
+    .mv-txt_date{
+      width: auto;
+      font-size: $fs-l;
+      @include mq('sp'){
+        font-size: 3.3rem;
+      }
     }
-  }
-  .mv-txt_date{
-    width: auto;
-    font-size: $fs-l;
-    @include mq('sp'){
-      font-size: 3.3rem;
-    }
+.mv-ttl-container{
+  width: 50%;
+  @include mq('sp'){
+    width: 100%;
+    margin-bottom: 80px;
   }
 }
 // singleの装飾
@@ -625,6 +646,7 @@ body{
   }
 }
 
+/*--------------story---------------*/
 
 
 /*---------pagenaviのcss-----------*/
