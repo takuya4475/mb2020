@@ -296,10 +296,7 @@ body{
   }
 }
 
-/*-------------- story ------------*/
-.story-bg{
-  background-color: #000;
-}
+/*-------------- topのstory ------------*/
 .story{
   background-image: url(img/story1.png);
   background-position: left;
@@ -538,7 +535,7 @@ body{
 /*  ------- 下層ページヘッダー---------*/
 
 //news-archiveと投稿ページの<body>に付いているクラス
-.category,{
+.category{
   .mv-flex{
     display: flex;
     justify-content: space-between;
@@ -646,10 +643,84 @@ body{
   }
 }
 
-/*--------------story---------------*/
-
-
-/*---------pagenaviのcss-----------*/
+/*---------固定ページのstory-----------*/
+.page{
+  &-id-13{
+    background-color: black;
+  }
+  .top-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    @include mq('sp'){
+      width: 100%;
+      // height:100%;
+    }
+  }
+  .story{
+    &-bg{
+      position: relative;
+      background-color: #000;
+    }
+    &-ttl{
+      margin-top: 0;
+    }
+    &-container{
+      width: 390px;
+      margin-top: 10px;
+      @include mq('tab'){
+        margin: 0 auto;
+      }
+    }
+    &-flex_relative{
+      display: flex;
+      align-items: flex-end;
+      @include mq('sp'){
+        display: block;
+      }
+    }
+    &-flex_relative.row-reverse{
+      flex-direction: row-reverse;
+    }
+    &-img_left{
+      width: 80%;
+      height: 325px;
+      @include mq('sp'){
+        width: 100%;
+      }
+      img{
+        object-fit: cover;
+        height: 325px;
+      }
+    }
+    &-txt_right{
+      width: 33%;
+      transform: translate(-50%);
+      @include mq('sp'){
+        max-width: 810px;
+        width: 80%;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        transform: translate(0);
+      }
+    }
+    &-txt_left{
+      width: 33%;
+      transform: translate(50%);
+      @include mq('sp'){
+        max-width: 810px;
+        width: 80%;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        transform: translate(0);
+      }
+    }
+  }
+}
+  /*---------pagenaviのcss-----------*/
 
 .wp-pagenavi {
   text-align: center;
@@ -659,7 +730,6 @@ body{
     background-color: #F4D102;
     color: #1A1A1A;
     text-decoration: none;
-    // border: 2px solid #F4D102;
     padding: 1rem 1rem;
     margin: 1rem;
   }
