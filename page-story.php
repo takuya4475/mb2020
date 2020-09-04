@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="story-bg">
+<div class="story-bg js-fadein">
   <figure class="top-img">
     <img src="<?php echo get_template_directory_uri(); ?>/img/story1.png" alt="">
   </figure>
@@ -34,40 +34,46 @@
   </div><!-- /.ly-wrapper -->
 </div><!-- /.story-bg -->
 
-<!-- 2枚目部分 -->
+<?php
+$cf_story = SCF::get('cf_story');
+$i = 0;  
+foreach ($cf_story as $fields ):
+    if($i % 2 == 0 ): //記事が偶数なら
+?>
+<!-- 偶数部分 -->
 <div class="story-bg">
-  <div class="story-flex_relative">
+  <div class="story-flex_relative js-fadein">
     <figure class="story-img_left">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/story2.png" alt="">
+      <?php echo wp_get_attachment_image( $fields['story-image'] , 'large' );
+      ?>
     </figure>
     <div class="story-txt_right">
-        <p class="story-txt">マハー（偉大な）、バーラタ（バラタ族）、つまり「偉大なバラタ族」の物語。神々が人間界を作り出すところから始まり、バラタ族の中のクル家とパーンドゥ家という二つの部族間の対立を巡るストーリー。神の血を引く個性豊かな登場人物たちによる差別、対立、欲望、嫉妬など、生の苦しみが描かれ、最終的には一族が破滅していく。<br>
-        世界的な文学作品古代ギリシャの「イーリアス」「オデュッセイア」と並ぶ世界三大叙事詩の一つに数えられており、「ラーマーヤナ」と双璧を成すインド二大叙事詩の一つ。原語はサンスクリット語であるが、全18巻、10万詩節を超えるその長さは聖書の約4倍と言われ、原典の日本語訳はいまだ完結していない。</p>
+        <p class="story-txt">
+          <?php echo nl2br($fields['story-txt']); ?>
+        </p>
     </div><!-- /.ly-flex -->
   </div><!-- /.ly-wrapper -->
 </div><!-- /.story-bg -->
-<!-- 3枚目部分 -->
+<?php 
+  $i++;
+  else: 
+?>
+  <!-- 奇数部分 -->
 <div class="story-bg">
-  <div class="story-flex_relative row-reverse">
+  <div class="story-flex_relative row-reverse js-fadein">
     <figure class="story-img_left">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/story1.png" alt="">
+    <?php echo wp_get_attachment_image( $fields['story-image'] , 'large' ); ?>
     </figure>
     <div class="story-txt_left">
-        <p class="story-txt">マハー（偉大な）、バーラタ（バラタ族）、つまり「偉大なバラタ族」の物語。神々が人間界を作り出すところから始まり、バラタ族の中のクル家とパーンドゥ家という二つの部族間の対立を巡るストーリー。神の血を引く個性豊かな登場人物たちによる差別、対立、欲望、嫉妬など、生の苦しみが描かれ、最終的には一族が破滅していく。<br>
-        世界的な文学作品古代ギリシャの「イーリアス」「オデュッセイア」と並ぶ世界三大叙事詩の一つに数えられており、「ラーマーヤナ」と双璧を成すインド二大叙事詩の一つ。原語はサンスクリット語であるが、全18巻、10万詩節を超えるその長さは聖書の約4倍と言われ、原典の日本語訳はいまだ完結していない。</p>
+      <p class="story-txt">
+        <?php echo nl2br($fields['story-txt']); ?>
+      </p>
     </div><!-- /.ly-flex -->
   </div><!-- /.ly-wrapper -->
 </div><!-- /.story-bg -->
-<!-- 2枚目部分 -->
-<div class="story-bg">
-  <div class="story-flex_relative">
-    <figure class="story-img_left">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/story2.png" alt="">
-    </figure>
-    <div class="story-txt_right">
-        <p class="story-txt">マハー（偉大な）、バーラタ（バラタ族）、つまり「偉大なバラタ族」の物語。神々が人間界を作り出すところから始まり、バラタ族の中のクル家とパーンドゥ家という二つの部族間の対立を巡るストーリー。神の血を引く個性豊かな登場人物たちによる差別、対立、欲望、嫉妬など、生の苦しみが描かれ、最終的には一族が破滅していく。<br>
-        世界的な文学作品古代ギリシャの「イーリアス」「オデュッセイア」と並ぶ世界三大叙事詩の一つに数えられており、「ラーマーヤナ」と双璧を成すインド二大叙事詩の一つ。原語はサンスクリット語であるが、全18巻、10万詩節を超えるその長さは聖書の約4倍と言われ、原典の日本語訳はいまだ完結していない。</p>
-    </div><!-- /.ly-flex -->
-  </div><!-- /.ly-wrapper -->
-</div><!-- /.story-bg -->
+<?php 
+  $i++;
+  endif; 
+  endforeach;
+?>
 <?php get_footer(); ?>

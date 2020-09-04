@@ -1,0 +1,60 @@
+/*  ----------inquiry(contact7)---  */
+.inquiry-txt{
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  color: $info;
+  @include mq('sp'){
+    width: 100%;
+  }
+}
+.inquiry-contact7{
+  width: 95%;
+  margin-left: auto;
+  text-align: right;
+  @include mq('sp'){
+    text-align: center;
+  }
+  label{
+    color: $info;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    @include mq('sp'){
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .wpcf7-form-control-wrap{
+      display: inline-block;
+      padding-top: 5px;
+      background-color: #FFFFFF;
+      @include mq('sp'){
+        margin-top: 10px;
+        max-width: 100%;
+      }
+    }
+  }
+  .inquiry-span{
+    margin-right: 15px;
+    @include mq('sp'){
+      margin-right: 0;
+    }
+  }
+  .wpcf7-submit{
+    display: block;
+    padding: 20px 80px;
+    background-color: $primary;
+    color: $white;
+    margin: 30px auto;
+  }
+  .form-width{
+    max-width: 100%;
+  }
+}

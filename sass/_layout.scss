@@ -72,6 +72,9 @@
     &_sp{
       display: flex;
       justify-content: center;
+      @include mq('sp'){
+        flex-direction: column;
+      }
     }
   }
 }

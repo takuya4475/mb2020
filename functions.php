@@ -62,3 +62,7 @@ function get_category_permalink($category_slug = 'news'){
   $category_link = get_category_link( $category_id );
   return $category_link;
 }
+// contact7のpやらbrタグを自動生成させない
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+    return false;}
