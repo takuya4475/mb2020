@@ -54,7 +54,7 @@
         </div><!-- /.cast-person -->
       </div><!-- /.ly-column -->
 <?php if(is_front_page()): ?>
-      <button class="cast-btn btn"><a href="#">もっと見る</a></button>
+      <button class="cast-btn btn"><a href="<?php echo esc_url(home_url('cast')) ?>">もっと見る</a></button>
 <?php endif; ?>
     </div><!-- /.cast-bgColor -->
   </section><!-- /.cast -->

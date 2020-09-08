@@ -7,14 +7,14 @@
 $schedule = SCF::get('schedule',10); //変数を宣言
   foreach( $schedule as $key => $schedule_arg): //$scheduleの数を$fieldsに
 ?>
-    <li class="schedule-item"><?php echo $schedule_arg['schedule_item']; ?><a href="<?php echo  esc_url($schedule_arg['schedule_url']); ?>">チケット予約受付中</a></li>
+    <li class="schedule-item"><?php echo $schedule_arg['schedule_item']; ?><a href="<?php get_ticket_site_url(); ?>">チケット予約受付中</a></li>
 <?php endforeach; ?>
 
     </ul>
   </div><!-- /.schedule-erea -->
   <div class=" ly-wrapper ly-column_sp ly-my30">
-    <button class="schedule-btn btn"><a href="#">お問い合わせはこちら</a></button>
-    <button class="schedule-btn2 btn"><a href="<?php echo  esc_url($schedule_arg['schedule_url']); ?>">チケット予約サイトへ</a></button>
+    <button class="schedule-btn btn"><a href="<?php echo esc_url(home_url('inquiry'))?>">お問い合わせはこちら</a></button>
+    <button class="schedule-btn2 btn"><a href="<?php get_ticket_site_url(); ?>">チケット予約サイトへ</a></button>
   </div><!-- /.ly-wrapper .ly-column ly-my30 -->
 </section><!-- /.schedule -->
 <footer class="footer">

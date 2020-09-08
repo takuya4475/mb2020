@@ -12,7 +12,7 @@
         </div><!-- /.mv-title-container -->
         <p class="mv-txt_date">2020年7月4日〜7日<br>なかのZERO大ホール</p>
       </div><!-- /.mv-flex -->
-      <button class="mv-btn btn"><a href="#">チケット予約サイトへ</a></button>
+      <button class="mv-btn btn"><a href="<?php get_ticket_site_url()?>">チケット予約サイトへ</a></button>
     </div><!-- /.mv-container -->
   </div><!-- /.ly-py-60 -->
   <!-- パンクズリスト -->
