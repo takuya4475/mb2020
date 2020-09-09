@@ -218,7 +218,9 @@ body{
     top: 0;
     left: 0;
     transform: translate(-10%, -10%) scale(0.8);
-
+    @include mq('sp'){
+      transform: translate(-35%, -35%) scale(0.3);
+    }
   }
   &-ttl{
     text-align: center;
